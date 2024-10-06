@@ -11,19 +11,4 @@ import org.springframework.context.annotation.Primary;
 @ComponentScan(basePackages = "com.konman01.beans")
 public class ProjectConfig {
 
-    @Bean
-    public Vehicle vehicle(){
-        Vehicle vehicle = new Vehicle();
-        vehicle.setName("Camry XSE");
-        return vehicle;
-    }
-
-    @Bean
-    public Person person(Vehicle vehicle){
-        Person person = new Person();
-        person.setName("John");
-        person.setVehicle(vehicle);
-        return person;
-    }
-
 }

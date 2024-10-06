@@ -6,7 +6,7 @@ import com.konman01.config.ProjectConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 
-public class Example10 {
+public class Example11 {
 
     public static void main(String[] args) {
 

@@ -4,11 +4,13 @@ import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import org.springframework.stereotype.Component;
 
+@Component
 public class Vehicle {
 
     private String name;
 
     public Vehicle () {
+        name = "Camry";
         System.out.println("Created Object of class Vehicle");
     }
 
