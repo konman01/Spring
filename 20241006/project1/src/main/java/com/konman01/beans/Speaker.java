@@ -1,2 +1,6 @@
-package com.konman01.beans;public interface Speaker {
+package com.konman01.beans;
+
+public interface Speaker {
+
+    void makeSound();
 }

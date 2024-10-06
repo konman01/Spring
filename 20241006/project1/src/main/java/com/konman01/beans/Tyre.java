@@ -1,7 +1,7 @@
 package com.konman01.beans;
 
-public interface Type {
+public interface Tyre {
 
     void rotate();
-    
+
 }

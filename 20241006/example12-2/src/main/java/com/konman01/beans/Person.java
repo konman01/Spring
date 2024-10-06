@@ -1,21 +1,22 @@
 package com.konman01.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Vehicle {
+public class Person {
 
     private String name;
-
-    final private VehicleServices vehicleServices;
-
+    private final Vehicle vehicle;
     @Autowired
-    public Vehicle(VehicleServices vehicleServices) {
-        this.vehicleServices = vehicleServices;
-        this.name = "Camry";
+    public Person(@Qualifier("vehicle2") Vehicle vehicle1) {
+        this.vehicle = vehicle1;
     }
 
+    public Vehicle getVehicle() {
+        return vehicle;
+    }
 
     public String getName() {
         return name;
@@ -23,9 +24,5 @@ public class Vehicle {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public VehicleServices getVehicleServices() {
-        return vehicleServices;
     }
 }
